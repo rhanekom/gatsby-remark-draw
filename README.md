@@ -48,31 +48,21 @@ You can find specific instructions on the [repo page][bobrus].
 In Markdown you can use a normal code-block with language set to "bob-svg":
 
 \`\`\`bob-svg
-   .------.
 
+  .------.
   |      |
-
   |  A   |
-
   |      |
-
   '------'
-
-​     |
-
-​     |
-
-​     *
-
+     |
+     |
+     *
   +------+
-
   |      |
-
   |  B   |---.
-
   |      |    \
-
   +------+     '----->  Hello
+
 \`\`\`
 
 Which will provide the following (rendered) inline SVG diagram:
@@ -88,6 +78,7 @@ Graphviz can be installed in most cases via your package manager.  See the [down
 In Markdown you can use a normal code-block with language set to "dot-svg" which will use the dot engine to produce the image:
 
 \`\`\`dot-svg
+
 graph {
     a -- b;
     b -- c;
@@ -96,6 +87,7 @@ graph {
     e -- c;
     e -- a;
 }
+
 \`\`\`
 
 will provide the following (rendered) inline SVG diagram:
