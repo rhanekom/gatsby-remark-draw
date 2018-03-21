@@ -4,8 +4,8 @@ A wrapper around some popular graph tools to generate diagrams from ebedded code
 
 This package currently supports:
 
-* [SvgBobRus][bobrus] for ASCII diagrams 
-* [GraphViz][graphviz] for diagrams expressed in dot 
+* [SvgBobRus][bobrus] for ASCII diagrams
+* [GraphViz][graphviz] for diagrams expressed in dot
 
 This package uses a simple (naive) mechanism - read the code block, pass it over stdin to the selected process, and replace the current code block with the generated SVG wrapped in a div.
 
@@ -25,7 +25,7 @@ In your `gatsby-config.js` add this plugin under the `gatsby-transformer-remark`
 resolve: "gatsby-transformer-remark",
       options: {
         plugins: [
-          "gatsby-remark-svgbob"
+          "gatsby-remark-draw"
         ]
       }
 // ...
@@ -35,11 +35,11 @@ resolve: "gatsby-transformer-remark",
 
 It is important to add this plugin **before** any other plugin that processes code blocks like `gatsby-remark-prismjs`.
 
-### Diagrams 
+### Diagrams
 
 #### SvgBobRus diagrams
 
-This package expects svgbob_cli to available in the system path.  Installation: 
+This package expects svgbob_cli to available in the system path.  Installation:
 
 `cargo install svgbob_cli`
 
@@ -53,7 +53,6 @@ In Markdown you can use a normal code-block with language set to "bob-svg":
 Which will provide the following (rendered) inline SVG diagram:
 
 ![Bob diagram](bobrus.png)
-
 
 
 #### Graphviz
