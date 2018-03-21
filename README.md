@@ -48,18 +48,30 @@ You can find specific instructions on the [repo page][bobrus].
 In Markdown you can use a normal code-block with language set to "bob-svg":
 
 \`\`\`bob-svg
-  .------.
+   .------.
+
   |      |
+
   |  A   |
+
   |      |
+
   '------'
-     |
-     |
-     *
+
+​     |
+
+​     |
+
+​     *
+
   +------+
+
   |      |
+
   |  B   |---.
+
   |      |    \
+
   +------+     '----->  Hello
 \`\`\`
 
