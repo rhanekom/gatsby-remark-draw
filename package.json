@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rhanekom/gatsby-remark-svgbob.git"
+    "url": "git+https://github.com/rhanekom/gatsby-remark-draw.git"
   },
   "keywords": [
     "remark",
