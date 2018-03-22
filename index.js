@@ -17,18 +17,16 @@ module.exports = ({ markdownAST }, { language = 'bob-svg' } = {}) => {
       return;
     }
 
-    (async () => {
-      const PipedProcess = require("./lib/pipedprocess.js");
-      const pipedprocess = new PipedProcess();
+    const PipedProcess = require("./lib/pipedprocess.js");
+    const pipedprocess = new PipedProcess();
 
-      try {
-        let svg = await pipedprocess.run(executable.exec, executable.args, node.value);
-        node.type = 'html'
-        node.value = svg;
-      } catch (e) {
-          console.log(e);
-          throw e;
-      }
-    })();    
+    try {
+      let svg = pipedprocess.run(executable.exec, executable.args, node.value);
+      node.type = 'html'
+      node.value = svg;
+    } catch (e) {
+      console.log(e);
+      throw e;
+    }
   });
 }
