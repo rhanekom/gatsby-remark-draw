@@ -4,13 +4,14 @@
   "description": "A wrapper around various graphing tools to convert text based diagrams in Markdown to SVG.",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "lint:js": "eslint --ext .js ."
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rhanekom/gatsby-remark-draw.git"
   },
-  "keywords": [    
+  "keywords": [
     "gatsby",
     "gatsby-plugin",
     "remark",
@@ -31,6 +32,12 @@
   },
   "homepage": "https://github.com/rhanekom/gatsby-remark-draw#readme",
   "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.0.1",
     "jest": "^22.4.3"
   }
 }

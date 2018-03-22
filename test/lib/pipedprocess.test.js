@@ -1,14 +1,14 @@
 const PipedProcess = require('../../lib/pipedprocess');
-const testString = "hello 456 ''";
+const testString = 'hello 456 ""';
 
-test("execute passes input and returns output", () => {
+test('execute passes input and returns output', () => {
     let process = new PipedProcess();
     expect(process.execute('cat', [], testString)).toBe(testString);
 });
 
-test("execute passes parameters", () => {
+test('execute passes parameters', () => {
     let process = new PipedProcess();
-    let output = process.execute("cat", ["-n"], testString);
+    let output = process.execute('cat', ['-n'], testString);
 
     /*  Whitespace
      *  followed by line number (1)

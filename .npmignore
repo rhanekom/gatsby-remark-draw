@@ -1,2 +1,5 @@
 *.png
 test
+.eslintrc.json
+.git
+package-lock.json
