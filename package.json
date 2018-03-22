@@ -1,6 +1,6 @@
 {
   "name": "gatsby-remark-draw",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A wrapper around various graphing tools to convert text based diagrams in Markdown to SVG.",
   "main": "index.js",
   "scripts": {
@@ -10,9 +10,10 @@
     "type": "git",
     "url": "git+https://github.com/rhanekom/gatsby-remark-draw.git"
   },
-  "keywords": [
-    "remark",
+  "keywords": [    
     "gatsby",
+    "gatsby-plugin",
+    "remark",
     "svgbob",
     "svgbobrus",
     "drawing",
