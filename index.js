@@ -1,23 +1,20 @@
 'use strict';
 
 const visit = require('unist-util-visit');
+const SupportedLanguages = require('./lib/supportedlanguages');
+const PipedProcess = require('./lib/pipedprocess.js');
 
 module.exports = ({ markdownAST }) => {
+    const languages = new SupportedLanguages();
+
     visit(markdownAST, 'code', node => {
-        let lang = (node.lang || '').toLowerCase();
-
-        let supportedLanguages = new Map();
-        supportedLanguages
-            .set('bob-svg', { exec: 'svgbob', args: []})
-            .set('dot-svg', { exec: 'dot', args: ['-Tsvg']});
-
-        let executable = supportedLanguages.get(lang);
+        let lang = node.lang;
+        let executable = languages.getCommand(lang);
 
         if (!executable) {
             return;
         }
-
-        const PipedProcess = require('./lib/pipedprocess.js');
+        
         const pipedprocess = new PipedProcess();
 
         let svg;

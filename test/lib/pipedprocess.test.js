@@ -1,4 +1,5 @@
 const PipedProcess = require('../../lib/pipedprocess');
+
 const testString = 'hello 456 ""';
 const cat = 'cat';
 
