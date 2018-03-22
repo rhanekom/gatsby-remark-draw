@@ -1,13 +1,17 @@
 # gatsby-remark-draw
 
-A wrapper around some popular graph tools to generate diagrams from ebedded code blocks in Markdown.
+A wrapper around some popular graph tools to generate diagrams from embedded code blocks in Markdown.
 
 This package currently supports:
 
 * [SvgBobRus][bobrus] for ASCII diagrams
 * [GraphViz][graphviz] for diagrams expressed in dot
 
-This package uses a simple (naive) mechanism - read the code block, pass it over stdin to the selected process, and replace the current code block with the generated SVG wrapped in a div.
+This package uses a simple (naive) mechanism - read the code block, pass it over stdin to the selected process, and replace the current code block with the generated SVG wrapped in a div.  For styling purposes the class names are the following:
+
+*  `remark-draw`
+*  `remark-draw-dot` (for GraphViz graphs)
+*  `remark-draw-svgbob` (for SvgBobRus graphs)
 
 In order to avoid conflicts with syntax highligters the language is postfixed with "-svg".
 

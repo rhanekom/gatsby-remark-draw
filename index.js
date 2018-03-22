@@ -20,13 +20,16 @@ module.exports = ({ markdownAST }, { language = 'bob-svg' } = {}) => {
     const PipedProcess = require("./lib/pipedprocess.js");
     const pipedprocess = new PipedProcess();
 
+    let svg;
+
     try {
-      let svg = pipedprocess.run(executable.exec, executable.args, node.value);
-      node.type = 'html'
-      node.value = svg;
+      svg = pipedprocess.run(executable.exec, executable.args, node.value);
     } catch (e) {
-      console.log(e);
-      throw e;
+      console.error(`Unable to render ${lang} graph: ${e}`);
+      return;
     }
+
+    node.type = 'html'
+    node.value = svg;
   });
 }
