@@ -1,6 +1,6 @@
 const PipedProcess = require('../../lib/pipedprocess');
 const testString = 'hello 456 ""';
-const cat = "cat";
+const cat = 'cat';
 
 test('execute passes input and returns output', () => {    
     expect(simpleCat()).toBe(testString);
@@ -42,7 +42,6 @@ test('run div wrapper contains exec class', () => {
     let test = new RegExp(`class="(.*)${PipedProcess.defaultClassName()}-cat(.*)?"`);
     expect(run(cat, [], testString)).toMatch (test);
 });
-
 
 function simpleCat() {
     // Simple cat with input written by this process

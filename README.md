@@ -4,14 +4,14 @@ A wrapper around some popular graph tools to generate diagrams from embedded cod
 
 This package currently supports:
 
-* [SvgBobRus][bobrus] for ASCII diagrams
-* [GraphViz][graphviz] for diagrams expressed in dot
+-   [SvgBobRus][bobrus] for ASCII diagrams
+-   [GraphViz][graphviz] for diagrams expressed in dot
 
 This package uses a simple (naive) mechanism - read the code block, pass it over stdin to the selected process, and replace the current code block with the generated SVG wrapped in a div.  For styling purposes the class names are the following:
 
-*  `remark-draw`
-*  `remark-draw-dot` (for GraphViz graphs)
-*  `remark-draw-svgbob` (for SvgBobRus graphs)
+-   `remark-draw`
+-   `remark-draw-dot` (for GraphViz graphs)
+-   `remark-draw-svgbob` (for SvgBobRus graphs)
 
 In order to avoid conflicts with syntax highligters the language is postfixed with "-svg".
 
@@ -20,8 +20,6 @@ In order to avoid conflicts with syntax highligters the language is postfixed wi
 ```bash
 npm install gatsby-remark-draw --save
 ```
-
-
 
 In your `gatsby-config.js` add this plugin under the `gatsby-transformer-remark` plugin:
 
@@ -34,8 +32,6 @@ resolve: "gatsby-transformer-remark",
       }
 // ...
 ```
-
-
 
 It is important to add this plugin **before** any other plugin that processes code blocks like `gatsby-remark-prismjs`.
 
@@ -53,11 +49,9 @@ In Markdown you can use a normal code-block with language set to "bob-svg":
 
 ![Bob markup](bob-markup.png)
 
-
 Which will provide the following (rendered) inline SVG diagram:
 
 ![Bob diagram](bobrus.png)
-
 
 #### Graphviz
 
@@ -71,11 +65,12 @@ will provide the following (rendered) inline SVG diagram:
 
 ![Graphviz output](graphviz.png)
 
-
 ## Demo
 
 Demos can be found [here](https://rhanekom.github.io/gatsby-remark-draw-demo/).
 
 [bobrus]: https://github.com/ivanceras/svgbobrus
+
 [graphviz]: https://www.graphviz.org/
+
 [graphviz-download]: https://www.graphviz.org/download/
