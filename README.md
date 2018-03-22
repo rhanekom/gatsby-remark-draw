@@ -1,6 +1,6 @@
 # gatsby-remark-draw
 
-[![Build Status](https://travis-ci.org/rhanekom/gatsby-remark-draw.svg?branch=master)](https://travis-ci.org/rhanekom/gatsby-remark-draw) [![npm version](https://badge.fury.io/js/gatsby-remark-draw.svg)](https://badge.fury.io/js/gatsby-remark-draw)
+[![Build Status](https://travis-ci.org/rhanekom/gatsby-remark-draw.svg?branch=master)](https://travis-ci.org/rhanekom/gatsby-remark-draw) [![npm version](https://badge.fury.io/js/gatsby-remark-draw.svg)](https://badge.fury.io/js/gatsby-remark-draw) [![Maintainability](https://api.codeclimate.com/v1/badges/2e9b9d150896cc215080/maintainability)](https://codeclimate.com/github/rhanekom/gatsby-remark-draw/maintainability)
 
 A wrapper around some popular graph tools to generate diagrams from embedded code blocks in Markdown.
 
