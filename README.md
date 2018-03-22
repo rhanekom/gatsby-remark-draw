@@ -1,5 +1,7 @@
 # gatsby-remark-draw
 
+[![npm version](https://badge.fury.io/js/gatsby-remark-draw.svg)](https://badge.fury.io/js/gatsby-remark-draw)
+
 A wrapper around some popular graph tools to generate diagrams from embedded code blocks in Markdown.
 
 This package currently supports:

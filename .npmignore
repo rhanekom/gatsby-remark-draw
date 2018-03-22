@@ -3,3 +3,6 @@ test
 .eslintrc.json
 .git
 package-lock.json
+.travis.yml
+.nvmrc
+.travis.yml
