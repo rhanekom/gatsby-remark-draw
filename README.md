@@ -68,6 +68,10 @@ will provide the following (rendered) inline SVG diagram:
 ![Graphviz output](graphviz.png)
 
 
+## Demo
+
+Demos can be found [here](https://rhanekom.github.io/gatsby-remark-draw-demo/).
+
 [bobrus]: https://github.com/ivanceras/svgbobrus
 [graphviz]: https://www.graphviz.org/
 [graphviz-download]: https://www.graphviz.org/download/
