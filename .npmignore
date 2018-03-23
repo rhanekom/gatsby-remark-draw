@@ -1,4 +1,4 @@
-*.png
+doc
 test
 .eslintrc.json
 .git
