@@ -49,11 +49,11 @@ You can find specific instructions on the [repo page][bobrus].
 
 In Markdown you can use a normal code-block with language set to "bob-svg":
 
-![Bob markup](bob-markup.png)
+![Bob markup](docs/bob-markup.png)
 
 Which will provide the following (rendered) inline SVG diagram:
 
-![Bob diagram](bobrus.png)
+![Bob diagram](docs/bobrus.png)
 
 #### Graphviz
 
@@ -61,11 +61,11 @@ Graphviz can be installed in most cases via your package manager.  See the [down
 
 In Markdown you can use a normal code-block with language set to "dot-svg" which will use the dot engine to produce the image:
 
-![Graphviz markup](graphviz-markup.png)
+![Graphviz markup](docs/graphviz-markup.png)
 
 will provide the following (rendered) inline SVG diagram:
 
-![Graphviz output](graphviz.png)
+![Graphviz output](docs/graphviz.png)
 
 ## Demo
 
