@@ -2,12 +2,18 @@
 
 [![npm version](https://badge.fury.io/js/gatsby-remark-draw.svg)](https://badge.fury.io/js/gatsby-remark-draw) [![Build Status](https://travis-ci.org/rhanekom/gatsby-remark-draw.svg?branch=master)](https://travis-ci.org/rhanekom/gatsby-remark-draw) [![Maintainability](https://api.codeclimate.com/v1/badges/2e9b9d150896cc215080/maintainability)](https://codeclimate.com/github/rhanekom/gatsby-remark-draw/maintainability) ![Dependencies](https://david-dm.org/rhanekom/gatsby-remark-draw.svg)
 
-A wrapper around some popular graph tools to generate diagrams from embedded code blocks in Markdown.
+A wrapper around some popular graph tools to generate diagrams from embedded code blocks in Markdown with Gatsby.js and Remark.
 
 This package currently supports:
 
 -   [SvgBobRus][bobrus] for ASCII diagrams
 -   [GraphViz][graphviz] for diagrams expressed in dot
+
+TODO:
+
+-    Enable options to be passed to executables
+-    Mermaid support
+-    Other GraphViz layout engines like `neato`
 
 This package uses a simple (naive) mechanism - read the code block, pass it over stdin to the selected process, and replace the current code block with the generated SVG wrapped in a div.  For styling purposes the class names are the following:
 
