@@ -1,33 +1,25 @@
 'use strict';
 
 const visit = require('unist-util-visit');
-const SupportedLanguages = require('./lib/supportedlanguages');
-const PipedProcess = require('./lib/pipedprocess.js');
+const Draw = require('./lib/draw');
 
-module.exports = ({ markdownAST }) => {
-    const languages = new SupportedLanguages();
 
+module.exports = ({ markdownAST }) => {  
     visit(markdownAST, 'code', node => {
-        let lang = node.lang;
-        let executable = languages.getCommand(lang);
+        let draw = new Draw();
+        let lang = node.lang || '';
 
-        if (!executable) {
+        if (!draw.isValidLanguage(lang)) {
             return;
         }
-        
-        const pipedprocess = new PipedProcess();
 
-        let svg;
-
-        try {      
-            svg = pipedprocess.run(executable.exec, executable.args, node.value);
+        try {   
+            let svg = draw.render(lang, node.value);
+            node.type = 'html';
+            node.value = svg;
         } catch (e) {
             // eslint-disable-next-line no-console
-            console.error(`Unable to render ${lang} graph: ${e}`);
-            return;
+            console.error(`Unhandled exception in rendering: ${e}`);            
         }
-
-        node.type = 'html';
-        node.value = svg;
     });
 };
