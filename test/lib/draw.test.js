@@ -4,7 +4,7 @@ let draw = new Draw();
 draw.setGenerator({
     generate: function(lang, input) {
         return {
-            'pure': input
+            'toEmbed': () => input
         };
     },
 });

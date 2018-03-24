@@ -27,8 +27,8 @@
   "author": "Riaan Hanekom",
   "license": "MIT",
   "dependencies": {
-    "unist-util-visit": "^1.3.0",
-    "skyrta": "^0.1.2"
+    "skyrta": "^0.1.3",
+    "unist-util-visit": "^1.3.0"
   },
   "bugs": {
     "url": "https://github.com/rhanekom/gatsby-remark-draw/issues"
