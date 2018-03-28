@@ -2,10 +2,8 @@ const Draw = require('../../lib/draw');
 
 let draw = new Draw();
 draw.setGenerator({
-    generate: function(lang, input) {
-        return {
-            'toEmbed': () => input
-        };
+    generate: function(lang, input, options) {
+        return { 'toEmbed': () => input, 'options': options };
     },
 });
 
@@ -36,4 +34,24 @@ test('isValidLanguage returns true for known language', () => {
 
 test('isValidLanguage returns true for known language', () => {
     expect(draw.isValidLanguage('unkown', testString)).toBeFalsy();
+});
+
+test('draw passes options to generator', () => {
+    let captureDraw = new Draw();
+    let capturedOptions = null;
+
+    captureDraw.setGenerator({
+        generate: function(lang, input, options) {
+            capturedOptions = options;                
+            return { 'toEmbed': () => input };
+        }
+    });
+
+    let svgOptions = { 'draw': 1 };
+    
+    captureDraw.render('bob-svg', '----->', { 
+        plugins: [], 'bob': svgOptions
+    });
+
+    expect(capturedOptions).toBe(svgOptions);
 });

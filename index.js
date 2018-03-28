@@ -4,7 +4,7 @@ const visit = require('unist-util-visit');
 const Draw = require('./lib/draw');
 
 
-module.exports = ({ markdownAST }) => {  
+module.exports = ({ markdownAST }, pluginOptions = {}) => {  
     visit(markdownAST, 'code', node => {
         let draw = new Draw();
         let lang = node.lang || '';
@@ -14,7 +14,7 @@ module.exports = ({ markdownAST }) => {
         }
 
         try {   
-            let svg = draw.render(lang, node.value);
+            let svg = draw.render(lang, node.value, pluginOptions);
             node.type = 'html';
             node.value = svg;
         } catch (e) {
