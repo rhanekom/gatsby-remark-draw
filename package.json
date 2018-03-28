@@ -1,6 +1,6 @@
 {
   "name": "gatsby-remark-draw",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "A wrapper around popular graphing tools (GraphViz, SvgBobRus, Mermaid) to convert text based diagrams in Markdown to SVG.",
   "main": "index.js",
   "scripts": {
