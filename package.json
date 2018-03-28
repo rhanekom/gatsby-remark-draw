@@ -28,7 +28,7 @@
   "author": "Riaan Hanekom",
   "license": "MIT",
   "dependencies": {
-    "skyrta": "^0.1.4-0",
+    "skyrta": "^0.1.4",
     "unist-util-visit": "^1.3.0"
   },
   "bugs": {
