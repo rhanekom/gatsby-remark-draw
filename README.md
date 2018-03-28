@@ -56,7 +56,10 @@ options: {
 	},
 	bob: {
 		fontFamily: 'verdana'
-	}
+	},
+    mermaid: {
+        theme: 'forest'
+    }
 }
 ```
 
@@ -92,6 +95,26 @@ will provide the following (rendered) inline SVG diagram:
 
 ![Graphviz output](doc/graphviz.png)
 
+#### Mermaid
+
+To render [Mermaid][mermaid] graphs you need to install both the mermaid and the cli packages:
+
+```bash
+npm install mermaid mermaid.cli --save
+```
+
+Note the `.` in the cli package name - the package with a `-` that shall not be named here has been deprecated.
+
+A sample flowchart from the main [Mermaid][mermaid] repository:
+
+![Graphviz markup](doc/mermaid-markup.png)
+
+will provide the following (rendered) SVG diagram:
+
+![Mermaid output](doc/mermaid.png)
+
+
+
 ## Demo
 
 Demos can be found [here](https://rhanekom.github.io/gatsby-remark-draw-demo/).
@@ -103,4 +126,6 @@ Demos can be found [here](https://rhanekom.github.io/gatsby-remark-draw-demo/).
 [graphviz-download]: https://www.graphviz.org/download/
 
 [skyrta]: https://github.com/rhanekom/skyrta
+
+[mermaid]: https://github.com/knsv/mermaid
 
