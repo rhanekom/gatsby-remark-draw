@@ -8,6 +8,7 @@ This package currently supports:
 
 -   [SvgBobRus][bobrus] for ASCII diagrams
 -   [GraphViz][graphviz] for diagrams expressed in dot
+-   [Mermaid][mermaid] for diagrams and flowcharts
 
 TODO:
 
