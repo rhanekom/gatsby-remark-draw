@@ -43,6 +43,25 @@ resolve: "gatsby-transformer-remark",
 
 It is important to add this plugin **before** any other plugin that processes code blocks like `gatsby-remark-prismjs`.
 
+Since v1.0.8 options can now be passed through to the rendering engine to change default settings.  For example,
+
+```json
+resolve: 'gatsby-remark-draw',
+options: {
+	dot: {
+		edgeAttributes: {
+			'arrowtail': 'empty',
+			'arrowhead': 'empty'
+		}
+	},
+	bob: {
+		fontFamily: 'verdana'
+	}
+}
+```
+
+Please see the [Skyrta documentation][skyrta] for details on the options available.
+
 ### Diagrams
 
 #### SvgBobRus diagrams
@@ -82,3 +101,6 @@ Demos can be found [here](https://rhanekom.github.io/gatsby-remark-draw-demo/).
 [graphviz]: https://www.graphviz.org/
 
 [graphviz-download]: https://www.graphviz.org/download/
+
+[skyrta]: https://github.com/rhanekom/skyrta
+
