@@ -12,11 +12,13 @@ This package currently supports:
 
 TODO:
 
--   Enable options to be passed to executables
--   Mermaid support
--   Other GraphViz layout engines like `neato`
+-   ~~Enable options to be passed to executables~~
+-   ~~Mermaid support~~
+-   ~~Other GraphViz layout engines like `neato`~~
+-   Embed as img tag option
+-   Tranform links to graph files
 
-This package uses a simple (naive) mechanism - read the code block, pass it over stdin to the selected process, and replace the current code block with the generated SVG wrapped in a div.  For styling purposes the class names are the following:
+This package uses a simple (naive) mechanism - read the code block, pass it the selected process and replace the current code block with the generated SVG wrapped in a div.  For styling purposes the class names are the following:
 
 -   `remark-draw`
 -   `remark-draw-dot` (for GraphViz graphs)
