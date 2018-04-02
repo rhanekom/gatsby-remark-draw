@@ -13,7 +13,7 @@ module.exports = ({ markdownAST }, pluginOptions = {}) => {
             return;
         }
 
-        try {   
+        try {            
             let svg = draw.render(lang, node.value, pluginOptions);
             node.type = 'html';
             node.value = svg;
