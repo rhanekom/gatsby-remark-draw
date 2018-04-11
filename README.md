@@ -15,16 +15,18 @@ TODO:
 -   ~~Enable options to be passed to executables~~
 -   ~~Mermaid support~~
 -   ~~Other GraphViz layout engines like `neato`~~
--   Embed as img tag option
+-   ~~Embed as img tag option~~
 -   Tranform links to graph files
 
-This package uses a simple (naive) mechanism - read the code block, pass it the selected process and replace the current code block with the generated SVG wrapped in a div.  For styling purposes the class names are the following:
+This package uses a simple (naive) mechanism - by default, read the code block, pass it the selected process and replace the current code block with the generated SVG wrapped in a div.  For styling purposes the class names are the following:
 
 -   `remark-draw`
 -   `remark-draw-dot` (for GraphViz graphs)
 -   `remark-draw-svgbob` (for SvgBobRus graphs)
 
 In order to avoid conflicts with syntax highligters the language is postfixed with "-svg".
+
+To rather write the files to disk and replace the code block with an `<img>` tag you can specify the `strategy: img` option inside `options`.  The generated SVG files will be written to the `public` directory and linked from there.  For styling purposes the generated image title starts with `remark-draw`.
 
 ## Usage
 
@@ -37,32 +39,34 @@ In your `gatsby-config.js` add this plugin under the `gatsby-transformer-remark`
 ```json
 resolve: "gatsby-transformer-remark",
       options: {
-        plugins: [
+		"strategy": "img",
+        "plugins": [
           "gatsby-remark-draw"
         ]
       }
 // ...
 ```
 
-It is important to add this plugin **before** any other plugin that processes code blocks like `gatsby-remark-prismjs`.
+It's important to add this plugin **before** any other plugin that processes code blocks like `gatsby-remark-prismjs`.
 
 Since v1.0.8 options can now be passed through to the rendering engine to change default settings.  For example,
 
 ```json
 resolve: 'gatsby-remark-draw',
-options: {
-	dot: {
-		edgeAttributes: {
-			'arrowtail': 'empty',
-			'arrowhead': 'empty'
+	options: {
+		dot: {
+			edgeAttributes: {
+				'arrowtail': 'empty',
+				'arrowhead': 'empty'
+			}
+		},
+		bob: {
+			fontFamily: 'verdana'
+		},
+		mermaid: {
+			theme: 'forest'
 		}
-	},
-	bob: {
-		fontFamily: 'verdana'
-	},
-    mermaid: {
-        theme: 'forest'
-    }
+	}
 }
 ```
 
