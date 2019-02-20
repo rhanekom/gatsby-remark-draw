@@ -3,6 +3,7 @@
 const crypto = require('crypto');
 const fs = require('fs');
 const path = require('path');
+const urljoin = require('url-join');
 
 const visit = require('unist-util-visit');
 const Draw = require('./lib/draw');
@@ -32,7 +33,7 @@ module.exports = ({ markdownAST, pathPrefix }, pluginOptions = {}) => {
                 const image = {
                     type: 'image',
                     title: 'remark-draw image',
-                    url: path.join('/', pathPrefix, fileName)
+                    url: urljoin('/', pathPrefix, fileName)
                 };
               
                 parent.children.splice(index, 1, image);
