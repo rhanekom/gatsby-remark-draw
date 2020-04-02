@@ -48,4 +48,6 @@ module.exports = ({ markdownAST, pathPrefix }, pluginOptions = {}) => {
             console.error(`Unhandled exception in rendering: ${e}`);            
         }
     });
+
+    return markdownAST;
 };
